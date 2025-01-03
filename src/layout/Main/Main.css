@@ -1,0 +1,13 @@
+.main{
+    width: 100%;
+    height: 100vh;
+}
+
+.light{
+    background-color: var(--lightbackground-color);
+    color:var(--text-color)
+}
+.dark{
+    background-color: var(--darkbackground-color);
+    color:var(--text-color)
+}

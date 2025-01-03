@@ -7,3 +7,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+:root{
+    --darkbackground-color:#000000;
+    --text-color:red;
+    --lightbackground-color:#ffffff;
+}
