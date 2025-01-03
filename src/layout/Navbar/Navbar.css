@@ -1,0 +1,38 @@
+.navbar{
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    height: 70px;
+    background-color: #e7dddd !important;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 3px 3px 5px brown;
+    border: none;
+    outline: none;
+}
+.navbarHeaderText{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+.navbarList{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbarListItem{
+    list-style: none;
+    margin: 0 10px;
+}
+.active{
+    color: #000000;
+}
+.navbarAvator{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.toggle{
+    margin-left: 20px;
+}

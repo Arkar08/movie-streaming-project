@@ -11,3 +11,6 @@
     background-color: var(--darkbackground-color);
     color:var(--text-color)
 }
+.header{
+    padding-top: 20px;
+}

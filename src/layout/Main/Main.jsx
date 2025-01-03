@@ -10,7 +10,9 @@ const Main = () => {
   const {theme} = useContext(ThemeContext)
   return (
     <div className={`main ${theme}`}>
-      <Navbar />
+      <div className="header">
+        <Navbar />
+      </div>
       <Outlet/>
       <Footer />
     </div>
