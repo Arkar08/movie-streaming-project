@@ -13,8 +13,10 @@ const Main = () => {
       <div className="header">
         <Navbar />
       </div>
-      <Outlet/>
-      <Footer />
+      <div className="middle">
+        <Outlet/>
+        <Footer />
+      </div>
     </div>
   )
 }

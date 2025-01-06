@@ -1,8 +1,8 @@
 .navbar{
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
-    padding: 10px;
-    height: 70px;
+    padding: 5px;
+    height: 100%;
     background-color: #e7dddd !important;
     display: flex;
     justify-content: space-around;
@@ -10,6 +10,7 @@
     box-shadow: 3px 3px 5px brown;
     border: none;
     outline: none;
+    border-radius: 5px;
 }
 .navbarHeaderText{
     font-size: 24px;
@@ -26,7 +27,10 @@
     margin: 0 10px;
 }
 .active{
-    color: #000000;
+    color: #ffffff;
+    background-color: #000000;
+    padding: 10px;
+    border-radius: 20px;
 }
 .navbarAvator{
     display: flex;

@@ -8,13 +8,14 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import { styled } from '@mui/material/styles';
 import { useContext } from 'react';
 import { ThemeContext } from '../../context/ThemeContext';
+import { Button } from '@material-tailwind/react';
 
 
 const Navbar = () => {
 
   const MaterialUISwitch = styled(Switch)(({ theme }) => (
     {
-    width: 62,
+    width: 61,
     height: 34,
     padding: 7,
     '& .MuiSwitch-switchBase': {
@@ -101,11 +102,11 @@ const Navbar = () => {
       <div className='navbarAvator'>
         <Avatar alt="Remy Sharp" src={boy}  sx={{ width: 56, height: 56 }}/>
         <div className='toggle'>
-        <FormControlLabel
-          control={<MaterialUISwitch sx={{ m: 1 }} onChange={toggleTheme} checked={theme === 'light' ? false : true}/>}
-          label={theme === 'light' ? 'Dark Mode' : 'Light Mode'}
-        />
+          <FormControlLabel
+            control={<MaterialUISwitch sx={{ m: 2 }} onChange={toggleTheme} checked={theme === 'light' ? false : true}/>}
+          />
         </div>
+        <Button className='bg-blue-700'>Logout</Button>
       </div>
     </div>
   )

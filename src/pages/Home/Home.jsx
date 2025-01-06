@@ -1,11 +1,32 @@
-import { Outlet } from "react-router"
+
+import CarouselImage from "../../components/Carousel/CarouselImage"
+import './Home.css'
+import TrendingNowHome from "../../components/TrendingNowHome/TrendingNowHome"
+import TopRatedHome from "../../components/TopRatedHome/TopRatedHome"
+import PopularSeriesHome from "../../components/PopularSeriesHome/PopularSeriesHome"
+import NewReleaseHome from "../../components/NewReleaseHome/NewReleaseHome"
+import PopularMovieHome from "../../components/PopularMovieHome/PopularMovieHome"
+import ComedyMovieHome from '../../components/ComedyMovieHome/ComedyMovieHome'
+import ActionMovieHome from '../../components/ActionMovieHome/ActionMovieHome'
+import AnimeHome from '../../components/AnimeHome/AnimeHome'
 
 
 const Home = () => {
   return (
-    <div>
-      <h1>Home</h1>
-      <Outlet />
+    <div className="homeContainer">
+      <div className="carouselContainer">
+        <CarouselImage />
+      </div>
+      <div>
+        <TrendingNowHome />
+        <NewReleaseHome />
+        <TopRatedHome />
+        <PopularSeriesHome />
+        <PopularMovieHome />
+        <ComedyMovieHome />
+        <ActionMovieHome />
+        <AnimeHome />
+      </div>
     </div>
   )
 }
