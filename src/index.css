@@ -12,7 +12,7 @@
 
 
 :root{
-    --darkbackground-color:#000000;
+    --darkbackground-color:#000000c3;
     --text-color:red;
     --lightbackground-color:#ffffff;
 }

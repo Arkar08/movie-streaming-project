@@ -15,6 +15,8 @@ const Main = () => {
       </div>
       <div className="middle">
         <Outlet/>
+      </div>
+      <div className="footer">
         <Footer />
       </div>
     </div>

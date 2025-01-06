@@ -92,10 +92,10 @@ const Navbar = () => {
             <NavLink to='/series' activeClassName='active'>Series</NavLink>
           </li>
           <li className='navbarListItem'>
-            <NavLink to='anime' activeClassName='active'>Anime</NavLink>
+            <NavLink to='/anime' activeClassName='active'>Anime</NavLink>
           </li>
           <li className='navbarListItem'>
-            <NavLink to='trending' activeClassName='active'>Trending</NavLink>
+            <NavLink to='/trending' activeClassName='active'>Trending</NavLink>
           </li>
         </ul>
       </div>
