@@ -1,15 +1,18 @@
 
 import './App.css'
 import { ThemeProvider } from './context/ThemeContext'
+import { TopRatedProvider } from './context/TopRatedContext'
 import View from './routes/View'
 
 function App() {
 
 
   return (
-    <ThemeProvider>
-      <View/>
-    </ThemeProvider>
+    <TopRatedProvider>
+      <ThemeProvider>
+        <View/>
+      </ThemeProvider>
+    </TopRatedProvider>
   )
 }
 
