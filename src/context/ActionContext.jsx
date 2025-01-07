@@ -5,6 +5,7 @@ import ApiConfig from '../utils/ApiConfig'
 export const ActionContext = createContext()
 
 
+
 // eslint-disable-next-line react/prop-types
 export const ActionProvider = ({children}) =>{
     const [action,setAction] = useState([])
@@ -12,6 +13,7 @@ export const ActionProvider = ({children}) =>{
     const [error, setError] = useState(null)
     const [loading , setLoading ] = useState(false)
     const [anime , setAnime] = useState([])
+    const [allMovies,setAllMovies] = useState([])
 
     
     const getData = async() =>{
@@ -19,6 +21,7 @@ export const ActionProvider = ({children}) =>{
         try {
             await ApiConfig.get('/movie/now_playing?language=en-US&page=2').then((res)=>{
                 const data = res.data.results;
+                setAllMovies(data)
                 const mainData = data.filter((secData)=>{
                     if(secData.genre_ids.includes(28) && !secData.genre_ids.includes(16)){
                         return secData;
@@ -55,7 +58,7 @@ export const ActionProvider = ({children}) =>{
     },[])
 
 
-    return <ActionContext.Provider value={{action,comedy,error,loading,anime}}>
+    return <ActionContext.Provider value={{action,comedy,error,loading,anime,allMovies}}>
         {children}
     </ActionContext.Provider>
 }

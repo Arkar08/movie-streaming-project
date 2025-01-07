@@ -14,7 +14,7 @@ export const PopularMoviesProvider = ({children}) =>{
     const getData = async() =>{
         setLoading(true)
         try {
-            await ApiConfig.get('/movie/popular?language=en-US&page=1').then((res)=>{
+            await ApiConfig.get('/movie/popular?language=en-US').then((res)=>{
                 setMovies(res.data.results)
                 setLoading(false)
             }).catch(error =>{

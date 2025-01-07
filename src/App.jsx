@@ -7,27 +7,30 @@ import { ReleaseProvider } from './context/ReleaseContext'
 import { ThemeProvider } from './context/ThemeContext'
 import { TopRatedProvider } from './context/TopRatedContext'
 import { TrendingProvider } from './context/TrendingContext'
+import {ShowProvider} from './context/ShowContext'
 import View from './routes/View'
 
 function App() {
 
 
   return (
-    <ActionProvider>
-      <ReleaseProvider>
-        <TrendingProvider>
-          <PopularMoviesProvider>
-            <PopularSeriesProvider>
-              <TopRatedProvider>
-                <ThemeProvider>
-                  <View/>
-                </ThemeProvider>
-              </TopRatedProvider>
-            </PopularSeriesProvider>
-          </PopularMoviesProvider>
-        </TrendingProvider>
-      </ReleaseProvider>
-    </ActionProvider>
+    <ShowProvider>
+      <ActionProvider>
+        <ReleaseProvider>
+          <TrendingProvider>
+            <PopularMoviesProvider>
+              <PopularSeriesProvider>
+                <TopRatedProvider>
+                  <ThemeProvider>
+                    <View/>
+                  </ThemeProvider>
+                </TopRatedProvider>
+              </PopularSeriesProvider>
+            </PopularMoviesProvider>
+          </TrendingProvider>
+        </ReleaseProvider>
+      </ActionProvider>
+    </ShowProvider>
   )
 }
 

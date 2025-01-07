@@ -15,7 +15,7 @@ export const TopRatedProvider = ({children}) =>{
     const getData = async()=>{
         try {
             setLoading(true)
-                await ApiConfig.get('/movie/top_rated?language=en-US&page=1').then((res)=>{
+                await ApiConfig.get('/movie/top_rated?language=en-US').then((res)=>{
                 setData(res.data.results)
                 setLoading(false)
             }).catch(error =>{

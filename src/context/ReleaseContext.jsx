@@ -16,7 +16,7 @@ export const ReleaseProvider = ({children}) =>{
     const getData  = async() =>{
         setLoading(true)
         try {
-            await ApiConfig.get('/movie/upcoming?language=en-US&page=1').then((res)=>{
+            await ApiConfig.get('/movie/upcoming?language=en-US').then((res)=>{
                 setRelease(res.data.results)
                 setReleaseDate(res.data.dates)
                 setLoading(false)
