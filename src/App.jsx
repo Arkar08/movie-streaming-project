@@ -1,5 +1,6 @@
 
 import './App.css'
+import { ActionProvider } from './context/ActionContext'
 import { PopularMoviesProvider } from './context/PopularMoviesContext'
 import { PopularSeriesProvider } from './context/PopularSeriesContext'
 import { ReleaseProvider } from './context/ReleaseContext'
@@ -12,19 +13,21 @@ function App() {
 
 
   return (
-   <ReleaseProvider>
-    <TrendingProvider>
-      <PopularMoviesProvider>
-        <PopularSeriesProvider>
-          <TopRatedProvider>
-            <ThemeProvider>
-              <View/>
-            </ThemeProvider>
-          </TopRatedProvider>
-        </PopularSeriesProvider>
-      </PopularMoviesProvider>
-    </TrendingProvider>
-   </ReleaseProvider>
+    <ActionProvider>
+      <ReleaseProvider>
+        <TrendingProvider>
+          <PopularMoviesProvider>
+            <PopularSeriesProvider>
+              <TopRatedProvider>
+                <ThemeProvider>
+                  <View/>
+                </ThemeProvider>
+              </TopRatedProvider>
+            </PopularSeriesProvider>
+          </PopularMoviesProvider>
+        </TrendingProvider>
+      </ReleaseProvider>
+    </ActionProvider>
   )
 }
 

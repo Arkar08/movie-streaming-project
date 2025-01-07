@@ -11,13 +11,13 @@ import ActionMovieHome from '../../components/ActionMovieHome/ActionMovieHome'
 import AnimeHome from '../../components/AnimeHome/AnimeHome'
 
 
+
+
 const Home = () => {
+
   return (
     <div className="homeContainer">
-      <div className="carouselContainer">
-        <CarouselImage />
-      </div>
-      <div>
+      <CarouselImage />
         <TrendingNowHome />
         <NewReleaseHome />
         <TopRatedHome />
@@ -26,7 +26,6 @@ const Home = () => {
         <ComedyMovieHome />
         <ActionMovieHome />
         <AnimeHome />
-      </div>
     </div>
   )
 }
