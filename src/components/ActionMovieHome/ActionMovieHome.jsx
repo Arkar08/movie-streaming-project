@@ -1,7 +1,27 @@
+import { useContext, useEffect, useState } from "react"
 import PopularCard from "../PopularCard/PopularCard"
+import { PopularMoviesContext } from "../../context/PopularMoviesContext"
 
 
 const ActionMovieHome = () => {
+  const {movies} = useContext(PopularMoviesContext)
+  const [action , setAction] = useState([])
+  
+  const getData = ()=>{
+    const data = movies?.filter((movie)=>{
+      if(movie.genre_ids.includes(28)){
+        return movie;
+      }
+    })
+    setAction(data)
+  }
+  
+
+
+  useEffect(()=>{
+    getData()
+  },[])
+
   return (
     <div className='mt-4 p-4'>
     <div className='flex justify-between items-center p-4 '>
@@ -10,12 +30,11 @@ const ActionMovieHome = () => {
     </div>
     <hr />
       <div className='grid grid-cols-1 md:grid-cols-5 lg:grid-cols-6 gap-4 p-4'>
-        <PopularCard />
-        <PopularCard />
-        <PopularCard />
-        <PopularCard />
-        <PopularCard />
-        <PopularCard />
+        {
+          action && action?.slice(6,12).map((action)=>{
+            return     <PopularCard secData={action} key={action.id}/>
+          })
+        }
       </div>
   </div>
   )

@@ -1,7 +1,19 @@
+import { useContext } from "react"
 import PopularCard from "../PopularCard/PopularCard"
+import { PopularMoviesContext } from "../../context/PopularMoviesContext"
 
 
 const PopularMovieHome = () => {
+  const {movies,error, loading } = useContext(PopularMoviesContext)
+
+  if(error){
+    return <div>{error}</div>
+  }
+
+  if(loading){
+    return <div>loading</div>
+  }
+
   return (
     <div className='mt-4 p-4'>
     <div className='flex justify-between items-center p-4 '>
@@ -10,18 +22,11 @@ const PopularMovieHome = () => {
     </div>
     <hr />
       <div className='grid grid-cols-1 md:grid-cols-5 lg:grid-cols-6 gap-4 p-4'>
-        <PopularCard />
-        <PopularCard />
-        <PopularCard />
-        <PopularCard />
-        <PopularCard />
-        <PopularCard />
-        <PopularCard />
-        <PopularCard />
-        <PopularCard />
-        <PopularCard />
-        <PopularCard />
-        <PopularCard />
+        {
+          movies && movies?.slice(0,12).map((data)=>{
+            return <PopularCard secData={data} key={data.id}/>
+          })
+        }
       </div>
   </div>
   )
