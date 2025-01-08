@@ -3,7 +3,9 @@ import './Card.css'
 
 const CardHover = ({secData}) => {
   const backgroundUrl = `https://image.tmdb.org/t/p/original${secData?.poster_path}`
-  const background = backgroundUrl? backgroundUrl : ""
+  const background = backgroundUrl? backgroundUrl : "";
+
+
   return (
         <Card className="relative h-[250px] w-full rounded-md shadow-sm cursor-pointer">
             <CardHeader  floated={false}

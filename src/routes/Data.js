@@ -8,6 +8,8 @@ import Notfound from "../pages/NotFound/Notfound";
 import Home from "../pages/Home/Home";
 import Main from "../layout/Main/Main";
 import Anime from "../pages/Anime/Anime";
+import MovieParams from "../pages/movieId/MovieParams";
+import SeriresParams from "../pages/seriesId/SeriresParams";
 
 export const data = [
     {
@@ -53,6 +55,16 @@ export const data = [
                 path:'/anime',
                 title:'Anime',
                 Component:Anime
+            },
+            {
+                path:'/movies/:id',
+                title:"Movies",
+                Component:MovieParams
+            },
+            {
+                path:'/series/:id',
+                title:"Series",
+                Component:SeriresParams
             }
         ]
     },
