@@ -6,7 +6,7 @@ import { PopularMoviesContext } from "../../context/PopularMoviesContext"
 const CarouselImage = () => {
 
   const {movies} = useContext(PopularMoviesContext)
-  const allMovie = movies? movies.slice(2,5) : ''
+  const allMovie = movies && movies.slice(2,5)
 
   return (
         <Carousel className="rounded-xl h-full w-full">

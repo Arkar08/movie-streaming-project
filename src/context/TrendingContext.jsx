@@ -28,8 +28,25 @@ export const TrendingProvider = ({children})=>{
         }
     }
 
+    const allData = async() =>{
+        setLoading(true)
+        try {
+            await ApiConfig.get('/trending/all/day?language=en-US&page=2').then((res)=>{
+                setTrending(prev => [...prev,...res.data.results])
+                setLoading(false)
+            }).catch((error)=>{
+                setError(error)
+                setLoading(false)
+            })
+        } catch (error) {
+            setError(error)
+            setLoading(false)
+        }
+    }
+
     useEffect(()=>{
         getData();
+        allData()
     },[])
 
 

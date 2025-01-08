@@ -3,6 +3,7 @@ import './Shows.css'
 import { ShowContext } from '../../context/ShowContext'
 import PopularCard from '../../components/PopularCard/PopularCard'
 
+
 const Shows = () => {
 
   const {show} = useContext(ShowContext)

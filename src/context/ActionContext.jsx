@@ -19,7 +19,7 @@ export const ActionProvider = ({children}) =>{
     const getData = async() =>{
         setLoading(true)
         try {
-            await ApiConfig.get('/movie/now_playing?language=en-US&page=2').then((res)=>{
+            await ApiConfig.get('/movie/now_playing?language=en-US&page=1').then((res)=>{
                 const data = res.data.results;
                 setAllMovies(data)
                 const mainData = data.filter((secData)=>{
