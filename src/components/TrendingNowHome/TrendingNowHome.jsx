@@ -27,7 +27,7 @@ const TrendingNowHome = () => {
         <p className="cursor-pointer text-gray-400 flex items-center" onClick={View}>View all <span className="material-icons text-sm ml-2">arrow_forward_ios</span></p>
       </div>
       <hr />
-        <div className='grid lg:grid-cols-5 md:grid-cols-4 gap-4 p-4'>
+        <div className='grid lg:grid-cols-5 md:grid-cols-4  grid-cols-2 gap-4 p-4'>
           {
             trending && trending?.slice(0,5).map((data)=>{
               return  <CardHover secData={data} key={data.id}/>

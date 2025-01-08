@@ -10,3 +10,9 @@
     gap: 20px;
     margin-top: 20px;
 }
+
+@media screen and (max-width:420px){
+    .cardContainers{
+        grid-template-columns: repeat(2,1fr);
+    }
+}

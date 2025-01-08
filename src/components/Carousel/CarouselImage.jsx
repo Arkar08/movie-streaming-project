@@ -15,8 +15,8 @@ const CarouselImage = () => {
               return(
                 <div className='mainImages'  key={movie.id}>
                   <div className='carouselText'>
-                    <h1 className="text-3xl font-bold text-white">{movie.title}</h1>
-                    <p className="text-white text-wrap">{movie.overview}</p>
+                    <h1 className="text-2xl font-bold text-white">{movie.title}</h1>
+                    <p className="text-white text-wrap text-sm">{movie.overview}</p>
                     <Button color='purple' className='mt-20'>Watch Now</Button>
                   </div>
                   <div className='cardImageContainer'>
